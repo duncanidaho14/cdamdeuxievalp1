@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    produit {{prod.id }}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {{prod.titre}}
+            {{prod.prix|number_format(2, '.', ',')}}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <ul>
+            {% for prod in produit %}
+                <li>{{prod.titre}}</li>
+                <li>{{prod.prix|number_format(2, '.', ',')}}</li>
+                <li>{{prod.images}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    Mise à jour de mon profile
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        {% for flashError in app.flashes('success') %}
+            <div class="alert alert-success" role="alert">{{ flashError }}</div>
+        {% endfor %}
+
+        {{ form_start(form) }}
+        {{ form_row(form.firstName) }}
+        {{ form_row(form.lastName) }}
+        {{ form_row(form.email) }}
+        {{ form_end(form) }}
+    </div>
+</div>
+    
+{% endblock %}

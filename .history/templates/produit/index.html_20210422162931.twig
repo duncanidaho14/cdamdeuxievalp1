@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProduitController!{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        {% for flashError in app.flashes('success') %}
+            <div class="alert alert-success" role="alert">{{ flashError }}</div>
+        {% endfor %}
+
+        <h1>Création de produit</h1>
+        {{ form_start(produit) }}
+        {{ form_widget(produit) }}
+        {{ form_end(produit) }}
+    </div>
+</div>
+{% endblock %}

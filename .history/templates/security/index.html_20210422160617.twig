@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    Mes Informations
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {{user.firstName}}
+            {{user.lastName}}
+            {{user.email}}
+            {{user.password}}
+            {{user.password}}
+        </div>
+    </div>
+{% endblock %}
