@@ -67,7 +67,7 @@ class ProduitController extends AbstractController
     /**
      * Remove produit
      * @Route("/produit/remove/{id}", name="produit_remove")
-     * @Security("is_granted('ROLE_USER') and user == produit.getUserOwner()", message="Vous n'avez pas le droit d'accéder à cette ressource")
+     * @Security("is_granted('ROLE_USER') and user == produit.get()", message="Vous n'avez pas le droit d'accéder à cette ressource")
      * @param Produit $produit
      * @param EntityManagerInterface $manager
      * @return Response

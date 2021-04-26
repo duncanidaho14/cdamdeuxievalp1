@@ -37,7 +37,7 @@ class Produit
     private $userOwner;
 
     /**
-     * @ORM\OneToMany(targetEntity=Image::class, mappedBy="produit", cascade={"persist"})
+     * @ORM\OneToMany(targetEntity=Image::class, mappedBy="produit", cascade=)
      */
     private $images;
 
